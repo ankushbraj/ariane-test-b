@@ -11,7 +11,7 @@ from keras.models import load_model
 from keras.preprocessing import sequence
 
 from classifytweet.resolve import paths
-from classifytweet.train import preprocess_tweet
+from train import preprocess_tweet
 
 
 class ScoringService(object):
