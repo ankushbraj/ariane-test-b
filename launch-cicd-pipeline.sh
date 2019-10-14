@@ -14,7 +14,7 @@ Build_Timeout_Mins=30
 
 # SageMaker Training Job Parameters
 Instance_Count=1
-Instance_Type="ml.m4.xlarge"
+Instance_Type="ml.t2.medium"
 Max_Runtime_In_Seconds=86400
 Vol_In_GB=60
 
