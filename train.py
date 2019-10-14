@@ -11,7 +11,7 @@ from keras.layers.embeddings import Embedding
 import pickle
 
 
-from classifytweet.resolve import paths
+from resolve import paths
 
 
 def read_config_file(config_json):
