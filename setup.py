@@ -25,7 +25,7 @@ setup(
 
     entry_points={
        "classifytweet.training": [
-           "train=train:entry_point",
+           "train=.train:entry_point",
        ],
         "classifytweet.hosting": [
            "serve=classifytweet.server:start_server",
