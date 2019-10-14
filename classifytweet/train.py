@@ -54,7 +54,7 @@ def entry_point():
     sentiment = np.array(dataframe.iloc[:, 0].values)
 
     hyper_params = read_config_file('hyperparameters.json')
-    vocab_size = int(hyper_params['vocab_size'])
+    vocab_size = int(30)
 
     tk = Tokenizer(num_words=vocab_size)
     tk.fit_on_texts(tweets)
@@ -94,10 +94,10 @@ def entry_point():
 
     history = model.fit(
         X, y,
-        batch_size=int(hyper_params["batch_size"]),
+        batch_size=int(10),
         verbose=1,
-        validation_split=float(hyper_params['validation_split']),
-        epochs=int(hyper_params['epochs'])
+        validation_split=float(0.2),
+        epochs=int(2)
     )
 
     model.save(paths.model(filename='model.h5'))
