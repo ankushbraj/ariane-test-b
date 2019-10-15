@@ -23,6 +23,9 @@ from torchvision.models import resnet18
 
 from resolve import paths
 
+import s3fs
+fs = s3fs.S3FileSystem()
+
 def read_config_file(config_json):
     """
     This function reads in a json file like hyperparameters.json or resourceconfig.json
@@ -48,7 +51,7 @@ def entry_point():
     #epoch_step_2 = 3
 
     #datasource = "classifytweet/data/vw/"
-    datasource =  "paths.input(channel='training')"
+    datasource = fs.ls('s3://ariane-test-c-cicd-pipeline-c11-input-data/input/data/training/')
 
     model_name = "modelName"
     epoch_step_1 = 2
