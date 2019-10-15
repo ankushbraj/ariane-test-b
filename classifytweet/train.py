@@ -101,12 +101,12 @@ def entry_point():
     )
 
     model.save(paths.model(filename='model.h5'))
-
+'''
     print("loss:" + str(history.history['loss']))
     print("acc:" + str(history.history['acc']))
     print("val_loss" + str(history.history['val_loss']))
     print("val_acc" + str(history.history['val_acc']))
-
+'''
 
 if __name__ == '__main__':
     entry_point()
